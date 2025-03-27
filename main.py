@@ -1,4 +1,5 @@
 import datetime
+from pets import Dog, Cat, Rabbit, Parrot, Pet
 
 def mainMenu() -> None:
     print("1. Feed")
@@ -10,30 +11,22 @@ def mainMenu() -> None:
 def userChoice(text: str = "> ") -> str:
     return input(text)
 
-def feed():
-    pass
-
-def clean():
-    pass
-
-def play():
-    pass
-
 def changePet():
     pass
 
 choice = 0
+pet = Pet("Came")
 
 while choice != 5:
     mainMenu()
-    int(userChoice("Please choose one of the options"))
-    # hello
+    choice = int(userChoice("Please choose one of the options: "))
+
     if choice == 1:
-        feed()
+        pet.feed()
     elif choice == 2:
-        play()
+        pet.play()
     elif choice == 3:
-        clean()
+        pet.clean()
     elif choice == 4:
         changePet()
     elif choice == 5:
