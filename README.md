@@ -1,3 +1,8 @@
-# pet-care
+# Pet care game
+This is a simple console game about pet caring.
 
-## This is my pet care project
+## Features
+You can:
++ Play with your pet
++ Feed your pet
++ Clean your pet
