@@ -15,7 +15,7 @@ def changePet():
     pass
 
 choice = 0
-pet = Pet("Came")
+pet = Pet()
 
 while choice != 5:
     mainMenu()
