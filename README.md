@@ -7,4 +7,11 @@ You can:
 + Play with your pet
 + Feed your pet
 + Clean your pet
-+ View your pets stats
++ View your pets stats like:
+  
+  + Name
+  + HP
+  + Hunger
+  + Cleanliness
+  + Happines
+  + Mood
