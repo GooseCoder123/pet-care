@@ -1,3 +1,4 @@
+
 class Pet():
     def __init__(self):
         self.name = input("Enter your pets name: ")
@@ -7,6 +8,17 @@ class Pet():
         self.happines = 10
         self.mood = "happy"
     
+    def printStatsBar(self, statName, statValue):
+        print(f"{statName}: [{"#" * statValue + "-" * (10 - statValue)}]")
+
+    def showStats(self):
+        print(f"Name: {self.name.capitalize()}")
+        self.printStatsBar("Hp", self.hp)
+        self.printStatsBar("Hunger", self.hunger)
+        self.printStatsBar("Cleanliness", self.cleanliness)
+        self.printStatsBar("Happines", self.happines)
+        print(f"Mood: {self.mood.capitalize()}")
+
     def feed(self):
         self.hunger -= 2
         self.hp += 3
