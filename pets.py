@@ -28,14 +28,28 @@ class Pet():
         print(f"{self.name} now has {self.hp} hp")
 
     def update(self):
-        pass
+        self.hunger += 1
+        self.cleanliness -= 1
+        if self.hunger > 5:
+            self.hp -= 1
+        if self.cleanliness < 3:
+            self.hp -= 1
+        if self.happines < 5:
+            self.hp -= 1
+        if self.hp <= 0:
+            print(f"Sorry, {self.name} has passed away")
+        self.updateMood()
 
     def updateMood(self):
-        pass
+        if self.happines > 8:
+            self.mood = "very happy"
+        elif self.happines > 5:
+            self.mood = "happy"
+        elif self.happines > 2:
+            self.mood = "okey"
+        else:
+            self.mood = "sad"
 
 class Dog(Pet):
     def __init__(self, name):
         super().__init__(name)
-
-    def goOnWalk(self):
-        pass
