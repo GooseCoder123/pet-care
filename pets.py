@@ -24,20 +24,33 @@ class Pet():
         self.hp += 3
         self.happines += 2
         self.cleanliness -= 1
-        print(f"{self.name} now has {self.hunger} hunger and {self.hp} hp")
+        print(f"{self.name} is now full of food")
 
     def clean(self):
         self.cleanliness += 2
         self.happines += 1
         self.hp -= 1
-        print(f"{self.name} now has {self.cleanliness} cleanliness level")
-    
+        print(f"{self.name} is now clean")
+
     def play(self):
         self.hp += 2
         self.happines += 3
         self.hunger += 2
         self.cleanliness -= 2
-        print(f"{self.name} now has {self.hp} hp")
+        print(f"{self.name} is happy for playing with you")
+
+    def goWalk(self):
+        self.hp += 1
+        self.hunger += 2
+        self.cleanliness -= 2
+        self.happines += 3
+        print(f"{self.name} is so dirty now")
+
+    def sleep(self):
+        self.hp += 3
+        self.hunger += 3
+        self.happines += 2
+        print(f"{self.name} got some good sleep")
 
     def update(self):
         self.hunger += 1
@@ -58,7 +71,7 @@ class Pet():
         elif self.happines > 5:
             self.mood = "happy"
         elif self.happines > 2:
-            self.mood = "okey"
+            self.mood = "okay"
         else:
             self.mood = "sad"
 
