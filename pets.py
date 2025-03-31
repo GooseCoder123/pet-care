@@ -9,7 +9,7 @@ class Pet():
         self.mood = "happy"
     
     def printStatsBar(self, statName, statValue):
-        print(f"{statName}: [{"#" * statValue + "-" * (10 - statValue)}]")
+        print(f"{statName}: [{"#" * statValue + "-" * (10 - statValue)}] {statValue:.2f}/10")
 
     def isMax(self, currentValue, maxValue = 10, minValue = 0):
         if currentValue > maxValue:
