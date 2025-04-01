@@ -21,8 +21,13 @@ choice = 0
 pet = Pet()
 
 while choice != 8:
+    ifSleep = pet.ifSleep()
     mainMenu()
     choice = int(userChoice("Please choose one of the options: "))
+
+    if ifSleep:
+        print(f"{pet.name} is currently slepping")
+        continue
 
     if choice == 1:
         pet.feed()

@@ -1,3 +1,4 @@
+from datetime import datetime
 
 class Pet():
     def __init__(self):
@@ -7,6 +8,16 @@ class Pet():
         self.cleanliness = 10
         self.happines = 10
         self.mood = "happy"
+
+    def ifSleep(self):
+        now = datetime.now()
+        currentTime = int(now.strftime("%H"))
+
+        if currentTime > 6 and currentTime < 22:
+            return False
+        else:
+            return True
+
     
     def printStatsBar(self, statName, statValue):
         print(f"{statName}: [{"#" * statValue + "-" * (10 - statValue)}] {statValue:.2f}/10")
